@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: sample-project
-  namespace: openshift-gitops
+  namespace: default
   description: Sample project for Kafka deployment
 spec:
   sourceRepos:
