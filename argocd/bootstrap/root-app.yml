@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/abduselamh/gitops-sample-example.git
     targetRevision: HEAD
-    path: argocd/apps
+    path: argocd/apps/environments/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops
