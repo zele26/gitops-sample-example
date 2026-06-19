@@ -10,10 +10,14 @@ spec:
   source:
     repoURL: https://github.com/zele26/gitops-sample-example.git
     targetRevision: HEAD
-    path: argocd/apps
+    path: argocd/apps/environments/dev
   destination:
     server: https://kubernetes.default.svc
+<<<<<<< HEAD
     namespace: sample-dev
+=======
+    namespace: default
+>>>>>>> 3963c6a52f2dfb7f97ac69d27923173d808c464e
   syncPolicy:
     automated:
       prune: true
