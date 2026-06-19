@@ -15,3 +15,12 @@ nameSuffix: -dev
 #       - op: replace
 #         path: /spec/replicas
 #         value: 1
+
+# Ensure KafkaNodePool labels reference the suffixed cluster name
+patches:
+  - target:
+      kind: KafkaNodePool
+    patch: |-
+      - op: replace
+        path: /metadata/labels/strimzi.io~1cluster
+        value: superapp-cluster-dev

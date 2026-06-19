@@ -4,16 +4,16 @@ metadata:
   name: bootstrap-root-app
   namespace: default
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: sample-project
   source:
-    repoURL: https://github.com/zele26/gitops-sample-example.git
+    repoURL: https://github.com/kasahun-welela/gitops-sample-example
     targetRevision: HEAD
-    path: argocd/apps/environments/dev
+    path: argocd/apps/environments/dev/
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: sample-dev
   syncPolicy:
     automated:
       prune: true

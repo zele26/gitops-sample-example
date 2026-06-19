@@ -1,4 +1,4 @@
-apiVersion: kafka.strimzi.io/v1beta2
+apiVersion: kafka.strimzi.io/v1
 kind: KafkaNodePool
 metadata:
   name: superapp-broker-knp
@@ -10,5 +10,5 @@ spec:
     - broker
   storage:
     type: persistent-claim
-    size: 100Gi
+    size: 5Gi
     deleteClaim: false
