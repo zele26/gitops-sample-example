@@ -8,7 +8,7 @@ metadata:
 spec:
   project: sample-project
   source:
-    repoURL: https://github.com/kasahun-welela/gitops-sample-example
+    repoURL: https://github.com/zele26/gitops-sample-example
     targetRevision: HEAD
     path: argocd/apps/environments/dev/
   destination:
