@@ -2,13 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: sample-project
-  namespace: openshift-gitops
-  description: Sample project for Kafka deployment
+  namespace: default
 spec:
   sourceRepos:
   - '*'
   destinations:
   - namespace: sample-dev
+    server: https://kubernetes.default.svc
+  - namespace: default
     server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   - group: '*'
